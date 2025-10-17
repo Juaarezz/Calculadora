@@ -21,6 +21,8 @@ public class Calculadora {
 			System.out.print(sumar(a, b));
 		} else if (operador.equals("-")) {
 			System.out.print(restar(a, b));
+		} else if (operador.equals("*")) {
+			System.out.print(multiplicar(a, b));
 		}
 	}
 	
@@ -29,5 +31,8 @@ public class Calculadora {
 	}
 	public static double restar(double a, double b) {
 		 return a - b;
+	}
+	public static double multiplicar(double a, double b) {
+		return a * b;
 	}
 }
