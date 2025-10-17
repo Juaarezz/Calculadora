@@ -23,6 +23,10 @@ public class Calculadora {
 			System.out.print(restar(a, b));
 		} else if (operador.equals("*")) {
 			System.out.print(multiplicar(a, b));
+		} else if (operador.equals("/")) {
+			System.out.print(dividir(a, b));
+		} else {
+			System.out.print("Error: Introduce un valor válido.");
 		}
 	}
 	
@@ -34,5 +38,12 @@ public class Calculadora {
 	}
 	public static double multiplicar(double a, double b) {
 		return a * b;
+	}
+	public static double dividir(double a, double b) {
+		if (b == 0) {
+			throw new IllegalArgumentException("No se puede dividir entre cero");
+		} else {
+			return a / b;
+		}
 	}
 }
